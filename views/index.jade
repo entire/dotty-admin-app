@@ -1,8 +1,24 @@
 extends layout
 
-block headblock 
 
+block headblock 
+   title Dotty 
+
+block cssblock
+    
 block bodyblock
-    h1= title
-    p Welcome to #{title}
-    p Something here.
+    div.ui.grid
+        div.row
+        div.row
+            div.six.wide.column.centered
+                div.ui.segment.form
+                    img(src="/images/logo.png").ui.image.centered
+                    div.ui.dividing.header Log Into Dotty
+                    div.ui.field
+                        label Username
+                        input.ui.input(placeholder="Username", type="text")
+                    div.ui.field
+                        label Password
+                        input.ui.input(placeholder="Password", type="password")
+                    br
+                    button.ui.primary.button(type="submit") Submit 
